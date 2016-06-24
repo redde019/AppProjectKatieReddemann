@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Learning and Development</string>
+    <string name="create_assignment_toolbar">Create Assignment</string>
+    <string name="view_assignment_toolbar">View Assignment</string>
+    <string name="action_settings">Settings</string>
+</resources>

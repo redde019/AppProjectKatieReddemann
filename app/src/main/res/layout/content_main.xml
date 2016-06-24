@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:id="@+id/contentMain">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dip"
+        android:id="@+id/imageView"
+        android:src="@drawable/defaultprofile"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/updates"
+        android:layout_alignEnd="@+id/updates"
+        android:layout_marginTop="50sp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Updates"
+        android:id="@+id/updates"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateOnClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:id="@+id/info"
+        android:layout_below="@+id/updates"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nestedScrollingEnabled="false"
+        android:onClick="infoOnClick" />
+<ViewFlipper
+    android:id="@+id/updateinfoflip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignTop="@+id/updates"
+    android:layout_toRightOf="@+id/info"
+    android:layout_toEndOf="@+id/info">
+
+    <RelativeLayout
+        android:id="@+id/updateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/updates"
+        android:layout_toRightOf="@+id/updates"
+        android:layout_toEndOf="@+id/updates">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/updatesView"
+            android:clickable="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/updates"
+        android:layout_toRightOf="@+id/updates"
+        android:layout_toEndOf="@+id/updates">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is info Text"
+            android:id="@+id/infoText"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/assignView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/updates"
+        android:layout_toRightOf="@+id/updates"
+        android:layout_toEndOf="@+id/updates">
+
+    <include layout="@layout/view_assignment" />
+
+    </RelativeLayout>
+
+</ViewFlipper>
+</RelativeLayout>

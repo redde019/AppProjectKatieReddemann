@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.syntelinc.syntelligence.myapplication.MainActivity">
+    <item
+        android:id="@+id/main_activity"
+        android:orderInCategory="100"
+        android:icon="@drawable/arrow1_w"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/create_assign"
+        android:orderInCategory="100"
+        android:icon="@drawable/add"
+        android:title="Create Assignment"
+        app:showAsAction="always" />
+    <!--temp for debugging-->
+    <item
+        android:id="@+id/view_assign"
+        android:orderInCategory="100"
+        android:icon="@drawable/add"
+        android:title="View Assignment"
+        app:showAsAction="never" />
+</menu>
